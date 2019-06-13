@@ -1,1 +1,3 @@
-# Unity Game: 3D Checkers
+# 3D Checkers
+
+Game was maked with "3Ds Max" and "Unity3D".
