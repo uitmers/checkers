@@ -99,7 +99,7 @@ public class CheckersBoard : MonoBehaviour
     /// <summary>
     /// Podnoszenie figur
     /// </summary>
-    /// <param name="p"></param>
+    /// <param name="p">ID wybranej figury</param>
     private void UpdatePieceDrag(Piece p)
     {
         if (!Camera.main)
@@ -118,8 +118,8 @@ public class CheckersBoard : MonoBehaviour
     /// <summary>
     /// Wybieranie figur i wymuszony ruch
     /// </summary>
-    /// <param name="x" - ID planszy w poziomie></param>
-    /// <param name="y" - ID planszy w pionie ></param>
+    /// <param name="x">ID planszy w poziomie</param>
+    /// <param name="y">ID planszy w pionie</param>
     private void SelectPiece (int x,int y)
     {
         //Ruchy za planszę
@@ -148,10 +148,10 @@ public class CheckersBoard : MonoBehaviour
     /// <summary>
     /// Poruszanie się figur, ruchy dozwolone, zbijanie figur
     /// </summary>
-    /// <param name="x1" - Położenie początkowe figury w poziomie ></param>
-    /// <param name="y1" - Położenie początkowe figury w pionie ></param>
-    /// <param name="x2" - Położenie końcowe figury w poziomie ></param>
-    /// <param name="y2" - Położenie końcowe figury w pionie ></param>
+    /// <param name="x1">Położenie początkowe figury w poziomie </param>
+    /// <param name="y1">Położenie początkowe figury w pionie </param>
+    /// <param name="x2">Położenie końcowe figury w poziomie </param>
+    /// <param name="y2">Położenie końcowe figury w pionie </param>
     private void TryMove(int x1, int y1, int x2, int y2)
     {
         forcedPieces = ScanForPossibleMove();
@@ -287,7 +287,7 @@ public class CheckersBoard : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="isWhite" - Czy biali wygrali ></param>
+    /// <param name="isWhite">Czy biali wygrali</param>
     private void Victory (bool isWhite)
     {
         if (isWhite)
@@ -298,9 +298,9 @@ public class CheckersBoard : MonoBehaviour
     /// <summary>
     /// Figury które muszą wykonać ruch
     /// </summary>
-    /// <param name="p" - ID figury z planszy ></param>
-    /// <param name="x" - Położenie figury w poziomie ></param>
-    /// <param name="y" - Położenie figury w pionie ></param>
+    /// <param name="p">ID figury z planszy </param>
+    /// <param name="x">Położenie figury w poziomie </param>
+    /// <param name="y">Położenie figury w pionie </param>
     private List<Piece> ScanForPossibleMove(Piece p, int x, int y)
     {
         forcedPieces = new List<Piece>();
@@ -370,8 +370,8 @@ for (int y = 0; y<3;y++)
     /// <summary>
     /// Tworzenie figur na planszy
     /// </summary>
-    /// <param name="x" - Miejsce gdzie ma się znajdować figura w poziomie ></param>
-    /// <param name="y" - Miejsce gdzie ma się znajdować figura w pionie ></param>
+    /// <param name="x">Miejsce gdzie ma się znajdować figura w poziomie </param>
+    /// <param name="y">Miejsce gdzie ma się znajdować figura w pionie </param>
     private void GeneratePiece(int x, int y)
     {
         bool isPieceWhite = (y > 3) ? false : true;
@@ -384,9 +384,9 @@ for (int y = 0; y<3;y++)
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="p" - ID figury z planszy ></param>
-    /// <param name="x" - położenie figury w poziomie ></param>
-    /// <param name="y" - położenie figury w pionie ></param>
+    /// <param name="p">ID figury z planszy </param>
+    /// <param name="x">położenie figury w poziomie </param>
+    /// <param name="y">położenie figury w pionie </param>
     private void MovePiece(Piece p, int x, int y)
     {
         p.transform.position = (Vector3.right * x) + (Vector3.forward * y) + boardOffset + pieceOffset;
@@ -394,7 +394,7 @@ for (int y = 0; y<3;y++)
     /// <summary>
     /// Powiadomienia użytkownika o turze
     /// </summary>
-    /// <param name="text" - Tekst który ma być wyświetlany></param>
+    /// <param name="text">Tekst który ma być wyświetlany</param>
     public void Alert(string text)
     {
         alertCanvas.GetComponentInChildren<Text>().text = text;

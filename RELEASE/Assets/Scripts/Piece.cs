@@ -9,9 +9,9 @@ public class Piece : MonoBehaviour
     /// <summary>
     /// Sprawdzanie czy figura musi wykonać ruch
     /// </summary>
-    /// <param name="p" - tablica figur ></param>
-    /// <param name="x" - położenie figury w poziomie ></param>
-    /// <param name="y" - położenie figury w pionie ></param>
+    /// <param name="p">tablica figur</param>
+    /// <param name="x">położenie figury w poziomie></param>
+    /// <param name="y">położenie figury w pionie></param>
     public bool IsForceToMove(Piece[,] board, int x, int y)
     {
         if (isWhite || isKing)
@@ -77,11 +77,11 @@ public class Piece : MonoBehaviour
     /// <summary>
     /// Sprawdzanie czy ruch jest dozwolony
     /// </summary>
-    /// <param name="board" - tablica figur ></param>
-    /// <param name="x1" - położenie początkowe figury w poziomie ></param>
-    /// <param name="y1" - położenie początkowe figury w pionie ></param>
-    /// <param name="x2" - położenie końcowe figury w poziomie ></param>
-    /// <param name="y2" - położenie końcowe figury w pionie ></param>
+    /// <param name="board">tablica figur</param>
+    /// <param name="x1">położenie początkowe figury w poziomie</param>
+    /// <param name="y1">położenie początkowe figury w pionie</param>
+    /// <param name="x2">położenie końcowe figury w poziomie</param>
+    /// <param name="y2">położenie końcowe figury w pionie</param>
   public bool ValidMove(Piece[,] board, int x1, int y1, int x2, int y2)
     {
         //Jeżeli próbujesz przemieścić się na inną figurę
