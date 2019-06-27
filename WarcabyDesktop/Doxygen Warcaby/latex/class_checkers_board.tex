@@ -1,0 +1,324 @@
+\hypertarget{class_checkers_board}{}\section{Checkers\+Board Class Reference}
+\label{class_checkers_board}\index{CheckersBoard@{CheckersBoard}}
+
+
+Inherits Mono\+Behaviour.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_checkers_board_a43dfdbc2efbedd0e5a25bd3d6fda391e}{Alert}} (string text)
+\begin{DoxyCompactList}\small\item\em Powiadomienia użytkownika o turze \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a9dd97115a26f7074627eff96023efd6c}\label{class_checkers_board_a9dd97115a26f7074627eff96023efd6c}} 
+\mbox{\hyperlink{class_piece}{Piece}} \mbox{[},\mbox{]} {\bfseries pieces} = new \mbox{\hyperlink{class_piece}{Piece}}\mbox{[}8, 8\mbox{]}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a6d03e27d2b07661e498a810d71011953}\label{class_checkers_board_a6d03e27d2b07661e498a810d71011953}} 
+Game\+Object {\bfseries white\+Piece\+Prefab}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a93695d6f571a4bc0e8841c12fbb8f988}\label{class_checkers_board_a93695d6f571a4bc0e8841c12fbb8f988}} 
+Game\+Object {\bfseries black\+Piece\+Prefab}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a3b8ddc756a9969bc64c2f4d3ad98b240}\label{class_checkers_board_a3b8ddc756a9969bc64c2f4d3ad98b240}} 
+Game\+Object {\bfseries highlights\+Container}
+\item 
+\mbox{\Hypertarget{class_checkers_board_afe9b845e18909774b00cf2e25c86ae7f}\label{class_checkers_board_afe9b845e18909774b00cf2e25c86ae7f}} 
+Canvas\+Group {\bfseries alert\+Canvas}
+\item 
+\mbox{\Hypertarget{class_checkers_board_ab6f24d3618d875ad77b9dc608b3c5854}\label{class_checkers_board_ab6f24d3618d875ad77b9dc608b3c5854}} 
+Vector3 {\bfseries board\+Offset} = new Vector3(-\/4.\+0f, 0, -\/4.\+0f)
+\item 
+\mbox{\Hypertarget{class_checkers_board_a76e7203ed686bb8f808b011636171bed}\label{class_checkers_board_a76e7203ed686bb8f808b011636171bed}} 
+Vector3 {\bfseries piece\+Offset} = new Vector3(0.\+5f, 0, 0.\+5f)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_checkers_board_ac7cf49c7fdf75af75997b2fb2fba0d2e}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Ustawienia początkowe programu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_acb916ec6544b35e39f2eba5f855eed73}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Zmiana tury i położenie -\/ ciągła aktualizacja \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_aa23396a0d7ea31dc496f4204b78fe1ba}{Update\+Mouse\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Odczytywanie położenia kursora \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a0f4c37cf6ad7e2b7a275c926b1dd056d}{Update\+Piece\+Drag}} (\mbox{\hyperlink{class_piece}{Piece}} p)
+\begin{DoxyCompactList}\small\item\em Podnoszenie figur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a67e9f8275c139676479212ee5d07932c}{Select\+Piece}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Wybieranie figur i wymuszony ruch \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_adc47a5016166e41a7848549af77bb993}{Try\+Move}} (int x1, int y1, int x2, int y2)
+\begin{DoxyCompactList}\small\item\em Poruszanie się figur, ruchy dozwolone, zbijanie figur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a149bffb6407cae2045c8545a90306d82}{End\+Turn}} ()
+\begin{DoxyCompactList}\small\item\em Co ma się stać na koniec tury \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_ac148b117df6e0d374ff9a35b0e0854d2}{Check\+Victory}} ()
+\begin{DoxyCompactList}\small\item\em Sprawdzenie czy któryś z graczy wygrał \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_aa4fb3184676cf22bd5958b6484e86c34}{Victory}} (bool is\+White)
+\item 
+List$<$ \mbox{\hyperlink{class_piece}{Piece}} $>$ \mbox{\hyperlink{class_checkers_board_ad2c9c13a174af762f34a411fc290d02a}{Scan\+For\+Possible\+Move}} (\mbox{\hyperlink{class_piece}{Piece}} p, int x, int y)
+\begin{DoxyCompactList}\small\item\em Figury które muszą wykonać ruch \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_piece}{Piece}} $>$ \mbox{\hyperlink{class_checkers_board_a913e746f1d4f5091851dbe0d887ec2a5}{Scan\+For\+Possible\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Figury które muszą wykonać ruch \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a7b684b257525287c52741b1e6d2ae30a}{Highlight}} ()
+\begin{DoxyCompactList}\small\item\em Podświetlanie figur które musza wykonać ruch \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_acc289a7520fabb912525ef2a417a6e14}{Generate\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Tworzenie figur na planszy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_aea3617cd6463f7b4d01ab8688ecec3ad}{Generate\+Piece}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Tworzenie figur na planszy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_abdc45f3ba65e875a4e7a6d751014c1ee}{Move\+Piece}} (\mbox{\hyperlink{class_piece}{Piece}} p, int x, int y)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a5823ffc3ec26467dc308ef56cd37b6f9}\label{class_checkers_board_a5823ffc3ec26467dc308ef56cd37b6f9}} 
+float {\bfseries last\+Alert}
+\item 
+\mbox{\Hypertarget{class_checkers_board_ad6aa356fc5e84ba41ab92b238a73ca00}\label{class_checkers_board_ad6aa356fc5e84ba41ab92b238a73ca00}} 
+bool {\bfseries is\+White}
+\item 
+\mbox{\Hypertarget{class_checkers_board_afa67e41247a50f69c79fb06df1a7c0cb}\label{class_checkers_board_afa67e41247a50f69c79fb06df1a7c0cb}} 
+bool {\bfseries is\+White\+Turn}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a31f268249430780fe39c2bf1515f03e1}\label{class_checkers_board_a31f268249430780fe39c2bf1515f03e1}} 
+bool {\bfseries has\+Killed}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a39e2f5c5bc075b400a9c744860b4201b}\label{class_checkers_board_a39e2f5c5bc075b400a9c744860b4201b}} 
+\mbox{\hyperlink{class_piece}{Piece}} {\bfseries selected\+Piece}
+\item 
+\mbox{\Hypertarget{class_checkers_board_aa86020691bd8bc939a5eb0f31e2f2f0d}\label{class_checkers_board_aa86020691bd8bc939a5eb0f31e2f2f0d}} 
+List$<$ \mbox{\hyperlink{class_piece}{Piece}} $>$ {\bfseries forced\+Pieces}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a917d4599e8a6ed06b49cca2a9728f5be}\label{class_checkers_board_a917d4599e8a6ed06b49cca2a9728f5be}} 
+Vector2 {\bfseries mouse\+Over}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a4dea41545ca37cf7b87622b5b270599a}\label{class_checkers_board_a4dea41545ca37cf7b87622b5b270599a}} 
+Vector2 {\bfseries start\+Drag}
+\item 
+\mbox{\Hypertarget{class_checkers_board_a28fc7198f8f726a03dfa89f174019b07}\label{class_checkers_board_a28fc7198f8f726a03dfa89f174019b07}} 
+Vector2 {\bfseries end\+Drag}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_checkers_board_a43dfdbc2efbedd0e5a25bd3d6fda391e}\label{class_checkers_board_a43dfdbc2efbedd0e5a25bd3d6fda391e}} 
+\index{CheckersBoard@{CheckersBoard}!Alert@{Alert}}
+\index{Alert@{Alert}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{Alert()}{Alert()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Alert (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+Powiadomienia użytkownika o turze 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Tekst który ma być wyświetlany\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_checkers_board_ac148b117df6e0d374ff9a35b0e0854d2}\label{class_checkers_board_ac148b117df6e0d374ff9a35b0e0854d2}} 
+\index{CheckersBoard@{CheckersBoard}!CheckVictory@{CheckVictory}}
+\index{CheckVictory@{CheckVictory}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{CheckVictory()}{CheckVictory()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Check\+Victory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sprawdzenie czy któryś z graczy wygrał 
+
+\mbox{\Hypertarget{class_checkers_board_a149bffb6407cae2045c8545a90306d82}\label{class_checkers_board_a149bffb6407cae2045c8545a90306d82}} 
+\index{CheckersBoard@{CheckersBoard}!EndTurn@{EndTurn}}
+\index{EndTurn@{EndTurn}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{EndTurn()}{EndTurn()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+End\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Co ma się stać na koniec tury 
+
+\mbox{\Hypertarget{class_checkers_board_acc289a7520fabb912525ef2a417a6e14}\label{class_checkers_board_acc289a7520fabb912525ef2a417a6e14}} 
+\index{CheckersBoard@{CheckersBoard}!GenerateBoard@{GenerateBoard}}
+\index{GenerateBoard@{GenerateBoard}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{GenerateBoard()}{GenerateBoard()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Generate\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tworzenie figur na planszy 
+
+\mbox{\Hypertarget{class_checkers_board_aea3617cd6463f7b4d01ab8688ecec3ad}\label{class_checkers_board_aea3617cd6463f7b4d01ab8688ecec3ad}} 
+\index{CheckersBoard@{CheckersBoard}!GeneratePiece@{GeneratePiece}}
+\index{GeneratePiece@{GeneratePiece}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{GeneratePiece()}{GeneratePiece()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Generate\+Piece (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tworzenie figur na planszy 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Miejsce gdzie ma się znajdować figura w poziomie \\
+\hline
+{\em y} & Miejsce gdzie ma się znajdować figura w pionie \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_checkers_board_a7b684b257525287c52741b1e6d2ae30a}\label{class_checkers_board_a7b684b257525287c52741b1e6d2ae30a}} 
+\index{CheckersBoard@{CheckersBoard}!Highlight@{Highlight}}
+\index{Highlight@{Highlight}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{Highlight()}{Highlight()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Highlight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Podświetlanie figur które musza wykonać ruch 
+
+\mbox{\Hypertarget{class_checkers_board_abdc45f3ba65e875a4e7a6d751014c1ee}\label{class_checkers_board_abdc45f3ba65e875a4e7a6d751014c1ee}} 
+\index{CheckersBoard@{CheckersBoard}!MovePiece@{MovePiece}}
+\index{MovePiece@{MovePiece}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{MovePiece()}{MovePiece()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}}}]{p,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & ID figury z planszy \\
+\hline
+{\em x} & położenie figury w poziomie \\
+\hline
+{\em y} & położenie figury w pionie \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_checkers_board_ad2c9c13a174af762f34a411fc290d02a}\label{class_checkers_board_ad2c9c13a174af762f34a411fc290d02a}} 
+\index{CheckersBoard@{CheckersBoard}!ScanForPossibleMove@{ScanForPossibleMove}}
+\index{ScanForPossibleMove@{ScanForPossibleMove}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{ScanForPossibleMove()}{ScanForPossibleMove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_piece}{Piece}}$>$ Checkers\+Board.\+Scan\+For\+Possible\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}}}]{p,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Figury które muszą wykonać ruch 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & ID figury z planszy \\
+\hline
+{\em x} & Położenie figury w poziomie \\
+\hline
+{\em y} & Położenie figury w pionie \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_checkers_board_a913e746f1d4f5091851dbe0d887ec2a5}\label{class_checkers_board_a913e746f1d4f5091851dbe0d887ec2a5}} 
+\index{CheckersBoard@{CheckersBoard}!ScanForPossibleMove@{ScanForPossibleMove}}
+\index{ScanForPossibleMove@{ScanForPossibleMove}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{ScanForPossibleMove()}{ScanForPossibleMove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_piece}{Piece}}$>$ Checkers\+Board.\+Scan\+For\+Possible\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Figury które muszą wykonać ruch 
+
+\mbox{\Hypertarget{class_checkers_board_a67e9f8275c139676479212ee5d07932c}\label{class_checkers_board_a67e9f8275c139676479212ee5d07932c}} 
+\index{CheckersBoard@{CheckersBoard}!SelectPiece@{SelectPiece}}
+\index{SelectPiece@{SelectPiece}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{SelectPiece()}{SelectPiece()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Select\+Piece (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wybieranie figur i wymuszony ruch 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & ID planszy w poziomie\\
+\hline
+{\em y} & ID planszy w pionie\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_checkers_board_ac7cf49c7fdf75af75997b2fb2fba0d2e}\label{class_checkers_board_ac7cf49c7fdf75af75997b2fb2fba0d2e}} 
+\index{CheckersBoard@{CheckersBoard}!Start@{Start}}
+\index{Start@{Start}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ustawienia początkowe programu 
+
+\mbox{\Hypertarget{class_checkers_board_adc47a5016166e41a7848549af77bb993}\label{class_checkers_board_adc47a5016166e41a7848549af77bb993}} 
+\index{CheckersBoard@{CheckersBoard}!TryMove@{TryMove}}
+\index{TryMove@{TryMove}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{TryMove()}{TryMove()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Try\+Move (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Poruszanie się figur, ruchy dozwolone, zbijanie figur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & Położenie początkowe figury w poziomie \\
+\hline
+{\em y1} & Położenie początkowe figury w pionie \\
+\hline
+{\em x2} & Położenie końcowe figury w poziomie \\
+\hline
+{\em y2} & Położenie końcowe figury w pionie \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_checkers_board_acb916ec6544b35e39f2eba5f855eed73}\label{class_checkers_board_acb916ec6544b35e39f2eba5f855eed73}} 
+\index{CheckersBoard@{CheckersBoard}!Update@{Update}}
+\index{Update@{Update}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zmiana tury i położenie -\/ ciągła aktualizacja 
+
+\mbox{\Hypertarget{class_checkers_board_aa23396a0d7ea31dc496f4204b78fe1ba}\label{class_checkers_board_aa23396a0d7ea31dc496f4204b78fe1ba}} 
+\index{CheckersBoard@{CheckersBoard}!UpdateMouseOver@{UpdateMouseOver}}
+\index{UpdateMouseOver@{UpdateMouseOver}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{UpdateMouseOver()}{UpdateMouseOver()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Update\+Mouse\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Odczytywanie położenia kursora 
+
+\mbox{\Hypertarget{class_checkers_board_a0f4c37cf6ad7e2b7a275c926b1dd056d}\label{class_checkers_board_a0f4c37cf6ad7e2b7a275c926b1dd056d}} 
+\index{CheckersBoard@{CheckersBoard}!UpdatePieceDrag@{UpdatePieceDrag}}
+\index{UpdatePieceDrag@{UpdatePieceDrag}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{UpdatePieceDrag()}{UpdatePieceDrag()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Update\+Piece\+Drag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Podnoszenie figur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & ID wybranej figury\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_checkers_board_aa4fb3184676cf22bd5958b6484e86c34}\label{class_checkers_board_aa4fb3184676cf22bd5958b6484e86c34}} 
+\index{CheckersBoard@{CheckersBoard}!Victory@{Victory}}
+\index{Victory@{Victory}!CheckersBoard@{CheckersBoard}}
+\subsubsection{\texorpdfstring{Victory()}{Victory()}}
+{\footnotesize\ttfamily void Checkers\+Board.\+Victory (\begin{DoxyParamCaption}\item[{bool}]{is\+White }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+White} & Czy biali wygrali\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/krzysztof/\+Documents/checkers/\+R\+E\+L\+E\+A\+S\+E/\+Assets/\+Scripts/Checkers\+Board.\+cs\end{DoxyCompactItemize}
